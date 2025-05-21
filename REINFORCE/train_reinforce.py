@@ -113,6 +113,7 @@ def train_reinforce(env_name="LunarLander-v2", episodes=300, use_baseline=False,
     # save results
     save_video_mp4(frames, gif_path, fps=30)
     print(f"Saved animation to {gif_path}")
+    plt.cla()
     plt.plot(reward_history)
     plt.xlabel("Episode")
     plt.ylabel("Total Reward")
